@@ -1,15 +1,39 @@
+.clear {
+    background-image: url(https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/weather/cloud/cumulus-cloud.jpg);
+}
+
+.clouds {
+    background-image: url(https://www.langleyadvancetimes.com/wp-content/uploads/2019/12/19700357_web1_langley-weather-clouds-cloudy-cloud-grey-1280x720.jpg);
+
+}
+
+.rain {
+    background-image: url(https://i2-prod.coventrytelegraph.net/incoming/article4308606.ece/ALTERNATES/s615/1_rainjpeg.jpg);
+
+}
+
+.snow{
+    background-image: url(https://i2-prod.essexlive.news/incoming/article4772750.ece/ALTERNATES/s1200c/41073142_2010-12-23__mark_Snow__mark_-in-Chelmsford_.jpg);
+
+}
+
 body{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
+    color: #FFF;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
     height: 100vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-position: center;
+    background-size: cover;
 }
 
 h1 {
     font-size: 3em;
+    position: relative;
 }
 
 i.wi {
@@ -22,5 +46,19 @@ h2 {
 }
 
 .tooltip {
-    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    color: #FFF;
+    background-color: #222;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 12px;
+    transition: opacity .3s, top .5s;
+}
+
+h1:hover .tooltip {
+    top: -50px;
+    opacity: 1;
 }
